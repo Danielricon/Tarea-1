@@ -1,0 +1,22 @@
+3. Desarrollar un programa que visualice
+y sume la serie de números 4, 8, 12, 16, ..., 
+400.
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int suma = 0;
+    
+    cout << "\nSerie de números: ";
+    
+    for (int i = 4; i <= 400; i += 4) {
+        cout << i << " ,";
+        suma += i;
+    }
+    
+    cout << "\nLa suma de la serie es: " << suma << endl;
+    
+    return 0;
+}
