@@ -1,0 +1,59 @@
+7. Dibujar un(os) diagrama(s) de objetos que representen la jerarquía de objetos del 
+modelo Figura geométrica.
+
+
+class FiguraGeometrica {
+public:
+    virtual double calcularArea() = 0;
+    virtual double calcularPerimetro() = 0;
+};
+
+class Circulo : public FiguraGeometrica {
+private:
+    double radio;
+public:
+    double calcularArea() override {
+        return 3.14159 * radio * radio;
+    }
+    double calcularPerimetro() override {
+        return 2 * 3.14159 * radio;
+    }
+};
+
+class Rectangulo : public FiguraGeometrica {
+private:
+    double base;
+    double altura;
+public:
+    double calcularArea() override {
+        return base * altura;
+    }
+    double calcularPerimetro() override {
+        return 2 * (base + altura);
+    }
+};
+
+class Triangulo : public FiguraGeometrica {
+private:
+    double base;
+    double altura;
+public:
+    double calcularArea() override {
+        return 0.5 * base * altura;
+    }
+    double calcularPerimetro() override {
+        // Suponiendo que es un triángulo genérico
+        return 3 * base;
+    }
+};
+
+class Cuadrado : public FiguraGeometrica {
+private:
+    double lado;
+public:
+    double calcularArea() override {
+        return lado * lado;
+    }
+    double calcularPerimetro() override {
+        return 4 * lado;
+    }
