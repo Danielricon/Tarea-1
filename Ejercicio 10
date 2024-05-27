@@ -1,0 +1,4 @@
+10.¿Cuál es el resultado del siguiente código? int x = 0, y = -1; x += y++;
+
+
+resulta en    ' x = 0 ' y ' y = 0' .
